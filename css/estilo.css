@@ -1,0 +1,572 @@
+body{
+	margin: 0;
+	background-color: #000;
+	background-position: center top;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	font-family: 'Verdana';
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+a:visited{
+	text-decoration: none;
+}
+
+#contenedor{
+	margin: 0 auto;
+	background: #fff;
+	width: 1000px;
+}
+
+#cabecera{
+	margin: 0;
+	width: 1000px;
+	height: 100px;
+	background: #333;
+}
+
+#logo{
+	width: 250px;
+	height: 100px;
+	background: url('../img/logo.png');
+	cursor: default;
+	margin: 0;
+	float: left;
+}
+
+#logo:hover{
+	cursor: pointer;
+}
+
+
+ul, ol{
+	
+}
+
+#menu{
+	float: left;
+	/*width: 633px;*/
+}
+
+#menu ul{
+	padding: 0px;
+	margin: 30px auto;
+	list-style: none;
+}
+
+#menu ul li a{
+	text-decoration: none;
+	margin: 0;
+	padding: 10px 30px;
+	display: block;
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: 'Verdana';
+	color: #fff;
+}
+
+#menu ul li a:hover{
+	background: #fff;
+	color: #333;
+}
+
+#menu ul > li{
+	float: left;
+}
+
+#menu ul li:hover > ul{
+	display: block;
+}
+
+#menu ul li:hover > a {
+	background: #fff;
+	color: #333;
+}
+
+#menu ul li ul{
+	position: absolute;
+	background: #fff;
+	width: 220px;
+	top: 38px;
+	display: none;
+	list-style: none;
+}
+
+#menu ul li ul li a{
+	display: block;
+	font-size: 10pt;
+	padding: 5px;
+	margin: 0;
+	font-weight: bold;
+	font-family: 'Verdana';
+	width: 210px;
+	text-decoration: none;
+	color: #333;
+}
+
+#menu ul li ul li a:hover{
+	background: #222;
+	color: #fff;
+}
+
+#mapaSitio{
+	margin: 45px 15px 0;
+	float: left;
+}
+
+#mapaSitio a{
+	color: #fff;
+	font-size: 8pt;
+	font-family: 'Verdana';
+	font-weight: bold;
+	margin: 0 auto;
+}
+
+#mapaSitio a:hover{
+	color: #222;
+	background: #fff;
+}
+
+#contenido{
+	margin: 0;
+	float: left;
+	width: 100%;
+	background: #eee;
+	clear: both;
+}
+
+#contenido_slider{
+	height: 480px;
+	width: 100%;
+	background: #fff;
+	border-bottom: solid 1px #666; 
+	-moz-box-shadow: 0px 1px 0px #bbb; 
+	-webkit-box-shadow: 0px 1px 0px #bbb; 
+	box-shadow: 0px 1px 0px #bbb;
+	margin-bottom: 1px;
+}
+
+
+#slider_imagen{
+	background-position: center center;
+	background-attachment: scroll;
+	background-position: no-repeat;
+	height: 480px;
+	width: 1000px;
+}
+
+#contenido_opciones{
+	width: 100%;
+	background: #ededed;
+	margin: 30px auto;
+}
+
+#opciones_enlaces{
+	clear: both;
+	width: 200px;
+	height: 50px;
+	/*background: yellow;*/
+	margin: 25px auto;
+	text-align: center;
+	border-bottom: solid 1px #ccc; 
+	-moz-box-shadow: 0px 1px 0px #bbb; 
+	-webkit-box-shadow: 0px 1px 0px #bbb; 
+	box-shadow: 0px 1px 0px #bbb;
+}
+
+#opciones_enlaces img{
+	cursor: default;
+	margin: 0px 10px;
+}
+
+#opciones_enlaces img:hover{
+	cursor: pointer;
+}
+
+#opciones_calificacion{
+	clear: both;
+	width: 250px;
+	height: 50px;
+	/*background: blue;*/
+	background-position: center center;
+	background-attachment: scroll;
+	background-position: no-repeat;
+	margin: 15px auto;
+}
+
+#opciones_titulo{
+	clear: both;
+	width: 750px;
+	height: 50px;
+	/*background: green;*/
+	margin: 15px auto;
+	cursor: default;
+	color: #6a6a6a;
+	font-family: Verdana;
+	font-weight: bolder;
+	text-align: center;
+	line-height: 50px;
+	vertical-align: middle;
+	font-size: 18pt;
+}
+
+#opciones_verMas{
+	clear: both;
+	width: 150px;
+	height: 30px;
+	/*background: purple;*/
+	background: #eaeaea;
+	margin: 15px auto;
+	border: 1px dashed #ccc;
+	cursor: pointer;
+	color: #ccc;
+	font-family: Verdana;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle; 
+}
+
+#opciones_verMas:hover{
+	background: #ccc;
+	border: 1px dotted #aaa;
+	cursor: pointer;
+	color: #6a6a6a;
+}
+
+#pie{
+	margin: 0 0 25px;
+	float: left;
+	width: 100%;
+	height: 50px;
+	background: #333;
+}
+
+#pie_contador{
+	width: 450px;
+	margin: 0 10px;
+}
+
+#pie_contador span{
+	color: #fff;
+	font-weight: bold;
+	font-size: 14pt;
+	line-height: 50px;
+	vertical-align: middle;
+	margin: 0 10px 0 0;
+	float: left;
+}
+
+#contador_script{
+	float: left;
+	width: 170px;
+	height: 50px;
+	background: blue;
+}
+
+/* paginas de peliculas */
+
+#contenido_pagPelicula{
+
+	width: 100%;
+	background: #fff;
+	border-bottom: solid 1px #666; 
+	-moz-box-shadow: 0px 1px 0px #bbb; 
+	-webkit-box-shadow: 0px 1px 0px #bbb; 
+	box-shadow: 0px 1px 0px #bbb;
+	margin-bottom: 1px;
+}
+
+#pagina_contenido{
+	width: 650px;
+	
+	float: left;
+	border-right: solid 1px #666; 
+	-moz-box-shadow: 1px 0px 0px #bbb; 
+	-webkit-box-shadow: 1px 0px 0px #bbb; 
+	box-shadow: 1px 0px 0px #bbb;
+	margin-right: 1px;
+}
+
+#paginaConst_contenido{
+	width: 650px;
+	
+	float: left;
+	margin-right: 1px;
+}
+
+#pagina_contenido ul{
+	clear: both;
+}
+
+#pagina_contenido a{
+	color: #333;
+	font-size: 10pt;
+}
+
+#contenido_titulo{
+	width: 610px;
+	height: 50px;
+	margin: 20px;
+	float: left;
+	background: url('../img/iconoCamaraTitulo.png') no-repeat;
+}
+
+#contenido_titulo h1{
+	font-size: 24pt;
+	color: #333;
+	margin: 0px;
+	padding-left: 70px;
+	line-height: 50px;
+	vertical-align: middle;
+}
+
+#contenido_resultado{
+	width: 450px;
+	height: 150px;
+	margin: 0 100px;
+	clear: both;
+	float: left;
+}
+
+.contenido_noticias{
+	width: 550px;
+	height: 200px;
+	border-bottom: 1px double #CCC;
+	margin: 20px 30px;
+	clear: both;
+	float: left;
+}
+
+.noticias_izquierda{
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+.noticias_derecha{
+	float: left;
+	width: 330px;
+	height: 180px;	
+	margin: 10px;
+}
+
+.noticias_titulo{
+	font-weight: bold;	
+	text-align: justify;
+}
+
+.noticias_texto{
+	font-size: 14px;	
+	text-align: justify;
+}
+
+.contenido_pelisCartelera{
+	clear: both;
+	width: 100%;
+	height: 220px;
+	margin: 20px 0;
+}
+
+.pelisCartelera_titulo{
+	background: rgba(255, 255, 255, 0.5);
+	display: block;
+	height: 20px;
+	font-size: 13pt;
+	font-weight: bold;
+	color: #fff;
+	text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+	padding-left: 3em;
+}
+
+#pelisCartelera_dragon2{
+	background: url(../img/slds/sld_Dragons2.jpg) center;	
+}
+
+#pelisCartelera_malefica{
+	background: url(../img/slds/sld_Malefica.jpg) center;	
+}
+
+#pelisCartelera_bajoEstrella{
+	background: url(../img/slds/sld_BajoMismaEstrella.jpg) center;	
+}
+
+#pelisCartelera_filoTomorrow{
+	background: url(../img/slds/sld_FiloTomorrow.jpg) center;	
+}
+
+#pelisCartelera_xmen{
+	background: url(../img/slds/sld_Xmen.jpg) center;	
+}
+
+#pelisCartelera_odioAmor{
+	background: url(../img/slds/sld_HateLove.jpg) center;	
+}
+
+#pelisCartelera_tresDias{
+	background: url(../img/slds/sld_TresDias.jpg) center;	
+}
+
+#pelisCartelera_philomena{
+	background: url(../img/slds/sld_Philomena.jpg) center;	
+}
+
+#pagina_contenido form{
+	margin: 0px 50px 20px;
+}
+
+#pagina_contenido fieldset{
+	
+}
+
+#pagina_barraLateral{
+	width: 348px;
+	height: 480px;
+	float: left;
+	background: #ededed;
+}
+
+.pelicula_top{
+	width: 610px;
+	height: 405px;
+	margin: 0px 20px 30px;
+	border-bottom: 1px double #CCC;
+	float: left;
+	clear: both;
+}
+
+.top_izquierda{
+	float: left;
+	width: 270px;
+	height: 405px;	
+}
+
+.top_derecha{
+	float: left;
+	width: 300px;
+	height: 345px;	
+	margin: 30px 20px;
+}
+
+.top_derecha span{
+	font-weight: bold;
+	text-align: justify;	
+	line-height: 30px;
+}
+
+.derecha_5estrellas{
+	clear: both;
+	width: 250px;
+	height: 50px;
+	background-position: center center;
+	background-attachment: scroll;
+	background-position: no-repeat;
+	margin: 15px auto;
+	background:url(../img/5Estrella.png);
+}
+
+.derecha_4estrellas{
+	clear: both;
+	width: 250px;
+	height: 50px;
+	background-position: center center;
+	background-attachment: scroll;
+	background-position: no-repeat;
+	margin: 15px auto;
+	background:url(../img/4Estrella.png);
+}
+
+.derecha_3estrellas{
+	clear: both;
+	width: 250px;
+	height: 50px;
+	background-position: center center;
+	background-attachment: scroll;
+	background-position: no-repeat;
+	margin: 15px auto;
+	background:url(../img/3Estrella.png);
+}
+
+.derecha_2estrellas{
+	clear: both;
+	width: 250px;
+	height: 50px;
+	background-position: center center;
+	background-attachment: scroll;
+	background-position: no-repeat;
+	margin: 15px auto;
+	background:url(../img/2Estrella.png);
+}
+
+.derecha_1estrellas{
+	clear: both;
+	width: 250px;
+	height: 50px;
+	background-position: center center;
+	background-attachment: scroll;
+	background-position: no-repeat;
+	margin: 15px auto;
+	background:url(../img/1Estrella.png);
+}
+
+.pelicula_sinopsis{
+	width: 550px;
+	margin: 10px 50px;
+	font-style: italic;
+	color: #666;
+	text-align:justify;
+	height: 300px;
+	clear: both;
+	float: left;
+	background: url(../img/comillas.png);
+}
+
+.pelicula_trailer{
+	width: 560px;
+	margin: 10px 45px 20px;
+	background: #ccc;
+	clear: both;
+	float: left;
+}
+
+#contenido_pagPeliculaComentarios{
+	width: 100%;
+	background: #ededed;
+	margin: 30px auto;
+}
+
+#barraLateral_enlaces{
+	clear: both;
+	width: 200px;
+	height: 50px;
+	/*background: yellow;*/
+	margin: 25px auto 40px;
+	text-align: center;
+	border-bottom: solid 1px #ccc; 
+	-moz-box-shadow: 0px 1px 0px #bbb; 
+	-webkit-box-shadow: 0px 1px 0px #bbb; 
+	box-shadow: 0px 1px 0px #bbb;
+}
+
+#barraLateral_enlaces img{
+	cursor: default;
+	margin: 0px 10px;
+}
+
+#barraLateral_enlaces img:hover{
+	cursor: pointer;
+}
+
+#barraLateral_anuncio{
+	width: 300px;
+	height: 250px;
+	background: yellow;
+	margin: 25px auto;
+}
