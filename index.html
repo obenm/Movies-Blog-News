@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Pagina Peliculas</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+		<link href="icono.ICO" type="image/x-icon" rel="shortcut icon" />
+		<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+		<script src="js/jquery-1.11.1.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var timer;
+				var pelicula = 0;
+				var bgBody, sldImg, enlcCinp, enlcCimx, titl, pagUrl, calificacion;
+				setPelicula();
+				function cambiarPelicula(mov){
+					if(mov == 1){
+						bgBody = "url('img/bg_Dragons2.jpg')";
+						sldImg = "url('img/sld_Dragons2.jpg')";
+						enlcCinpl = "http://www.cinepolis.com.mx/_CARTELERA/sinopsis.aspx?ip=18978";
+						enlcCinmx = "http://cinemex.com/pelicula/1316/como-entrenar-a-tu-dragon-2";
+						titl = "Cómo Entrenar a tu Dragón 2";
+						pagUrl = "peliculas/como-entrenar-a-tu-dragon.html";
+						calificacion = 4;
+					}
+					else if(mov == 2){
+						bgBody = "url('img/bg_Malefica.jpg')";
+						sldImg = "url('img/sld_Malefica.jpg')";
+						enlcCinpl = "http://www.cinepolis.com/_CARTELERA/sinopsis.aspx?ip=18986";
+						enlcCinmx = "http://cinemex.com/pelicula/1272/malefica";
+						titl = "Malefica";
+						pagUrl = "peliculas/malefica.html";
+						calificacion = 3;
+					}
+					else if(mov == 3){
+						bgBody = "url('img/bg_BajoMismaEstrella.jpg')";
+						sldImg = "url('img/sld_BajoMismaEstrella.jpg')";
+						enlcCinpl = "http://www.cinepolis.com/_CARTELERA/sinopsis.aspx?ip=19161";
+						enlcCinmx = "http://cinemex.com/pelicula/1257/bajo-la-misma-estrella";
+						titl = "Bajo la Misma Estrella";
+						pagUrl = "peliculas/bajo-la-misma-estrella.html";
+						calificacion = 4;
+					}
+					else if(mov == 4){
+						bgBody = "url('img/bg_FiloTomorrow.jpg')";
+						sldImg = "url('img/sld_FiloTomorrow.jpg')";
+						enlcCinpl = "http://www.cinepolis.com/_CARTELERA/sinopsis.aspx?ip=19488";
+						enlcCinmx = "http://cinemex.com/pelicula/1285/al-filo-del-manana";
+						titl = "Al Filo del Mañana";
+						pagUrl = "peliculas/al-filo-del-manana.html";
+						calificacion = 3;
+					}
+					else if(mov == 5){
+						bgBody = "url('img/bg_Xmen.jpg')";
+						sldImg = "url('img/sld_Xmen.jpg')";
+						enlcCinpl = "http://www.cinepolis.com.mx/_CARTELERA/sinopsis.aspx?ip=18645";
+						enlcCinmx = "http://cinemex.com/pelicula/1223/x-men-dias-del-futuro-pasado";
+						titl = "X-Men: Días Del Futuro Pasado";
+						pagUrl = "peliculas/xmen-dias-del-futuro-pasado.html";
+						calificacion = 4;
+					}
+					else if(mov == 6){
+						bgBody = "url('img/bg_HateLove.jpg')";
+						sldImg = "url('img/sld_HateLove.jpg')";
+						enlcCinpl = "http://www.cinepolis.com.mx/_CARTELERA/sinopsis.aspx?ip=18971";
+						enlcCinmx = "http://cinemex.com/pelicula/1304/odio-el-amor";
+						titl = "Odio El Amor";
+						pagUrl = "peliculas/odio-el-amor.html";
+						calificacion = 3;
+					}
+					else if(mov == 7){
+						bgBody = "url('img/bg_TresDias.jpg')";
+						sldImg = "url('img/sld_TresDias.jpg')";
+						enlcCinpl = "http://www.cinepolis.com.mx/_CARTELERA/sinopsis.aspx?ip=17782";
+						enlcCinmx = "http://cinemex.com/pelicula/1204/tres-dias-para-matar";
+						titl = "Tres Días Para Matar";
+						pagUrl = "peliculas/tres-dias-para-matar.html";
+						calificacion = 2;
+					}
+					else if(mov == 8){
+						bgBody = "url('img/bg_Philomena.jpg')";
+						sldImg = "url('img/sld_Philomena.jpg')";
+						enlcCinpl = "http://www.cinepolis.com.mx/_CARTELERA/sinopsis.aspx?ip=17076";
+						enlcCinmx = "http://cinemex.com/pelicula/927/philomena";
+						titl = "Philomena";
+						pagUrl = "peliculas/philomena.html";
+						calificacion = 3;
+					}
+
+					//pagUrl = "construccion.html";
+
+					$("body").css("background-image", bgBody);
+					$("#slider_imagen").css("background-image", sldImg);
+					$("#enlace_cinepolis").attr("href", enlcCinpl);
+					$("#enlace_cinemex").attr("href", enlcCinmx);
+					$("#botonDerecho_enlace").attr("href", pagUrl);
+					$("#opciones_enlacePagina").attr("href", pagUrl);
+					$("#opciones_titulo").text(titl);
+					if(calificacion == 1)
+						$("#opciones_calificacion").css("background-image", "url('img/1Estrella.png')");
+					else if(calificacion == 2)
+						$("#opciones_calificacion").css("background-image", "url('img/2Estrella.png')");
+					else if(calificacion == 3)
+						$("#opciones_calificacion").css("background-image", "url('img/3Estrella.png')");
+					else if(calificacion == 4)
+						$("#opciones_calificacion").css("background-image", "url('img/4Estrella.png')");
+					else if(calificacion == 5)
+						$("#opciones_calificacion").css("background-image", "url('img/5Estrella.png')");
+					timer = setTimeout(setPelicula, 10000);
+				}
+
+				function setPelicula(){
+					pelicula++;
+					if(pelicula == 9)
+						pelicula = 1;
+					clearTimeout(timer);
+					cambiarPelicula(pelicula);
+				}
+				
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="contenedor">
+			<div id="cabecera">
+				<a href="index.html"><div id="logo"></div></a>
+				<div id="menu">
+					<ul>
+						<li><a href="index.html">Inicio</a>
+							<ul>
+								<li><a href="index.html">Pagina Principal</a></li>
+								<li><a href="mapa-de-sitio.html">Mapa de Sitio</a></li>
+							</ul>
+						</li>
+						<li><a href="noticias.html">Noticias</a></li>
+						<li><a href="cartelera.html">Cartelera</a>
+							<ul>
+								<li><a href="peliculas/como-entrenar-a-tu-dragon.html">Cómo Entrenar a tu Dragón 2</a></li>
+								<li><a href="peliculas/malefica.html">Malefica</a></li>
+								<li><a href="peliculas/bajo-la-misma-estrella.html">Bajo la Misma Estrella</a></li>
+								<li><a href="peliculas/al-filo-del-manana.html">Al Filo del Mañana</a></li>
+								<li><a href="peliculas/xmen-dias-del-futuro-pasado.html">X-Men: Días Del Futuro Pasado</a></li>
+								<li><a href="peliculas/odio-el-amor.html">Odio el Amor</a></li>
+								<li><a href="peliculas/tres-dias-para-matar.html">Tres Días para Matar</a></li>
+								<li><a href="peliculas/philomena.html">Philomena</a></li>
+							</ul>
+						</li>
+						<li><a href="envio.php">Contacto</a>
+							<ul>
+								<li><a href="contacto/envio.php">Envía</a></li>
+								<li><a href="contacto/consulta.html">Consulta</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div id="mapaSitio"><a href="mapa-de-sitio.html">Mapa de Sitio</a></div>
+			</div>
+			<div id="contenido">
+				<div id="contenido_slider">
+					
+					<div id="slider_botonAtras"></div>
+					<div id="slider_botonDerecho"></div>
+					<a id="botonDerecho_enlace" href="#"><div id="slider_imagen"></div></a>
+				</div>
+				<div id="contenido_opciones">
+					<div id="opciones_enlaces">
+						<a id="enlace_cinepolis" href="#" target="_blank"><img src="img/iconoCinepolis.png" height="50px" /></a>
+						<a id="enlace_cinemex" href="#" target="_blank"><img src="img/iconoCinemex.png" height="50px" /></a>
+					</div>
+					<div id="opciones_calificacion"></div>
+					<div id="opciones_titulo"></div>
+					<a id="opciones_enlacePagina" href="#"><div id="opciones_verMas">Ver Más</div></a>
+				</div>
+			</div>
+			<div id="pie">
+				<div id="pie_contador">
+					<span>Contador de visitas: </span>
+					<script type="text/javascript" src="http://counter3.statcounterfree.com/private/countertab.js?c=642310116f463d4659a969504937ad7e"></script>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
